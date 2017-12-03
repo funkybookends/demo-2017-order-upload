@@ -24,8 +24,16 @@ repositories {
 
 
 dependencies {
+	// TODO move versions to gradle.properties file
+	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-activemq')
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-validation')
+	compile('com.fasterxml:jackson-xml-databind:0.6.2')
+	compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.9.2'
+	compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.9.2'
+
+
+	testCompile('commons-io:commons-io:2.6')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
