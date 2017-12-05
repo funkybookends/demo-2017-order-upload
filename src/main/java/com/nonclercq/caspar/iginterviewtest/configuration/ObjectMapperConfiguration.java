@@ -14,9 +14,6 @@ public class ObjectMapperConfiguration
 	@Bean
 	public ObjectMapper xmlMapper()
 	{
-		final ObjectMapper xmlMapper = new XmlMapper()
-			.configure(DeserializationFeature.READ_DATE_TIMESTAMPS_AS_NANOSECONDS, true);
-
-		return xmlMapper;
+		return new XmlMapper().configure(DeserializationFeature.READ_DATE_TIMESTAMPS_AS_NANOSECONDS, true);
 	}
 }
